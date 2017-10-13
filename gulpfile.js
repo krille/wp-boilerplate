@@ -11,6 +11,7 @@ var postcss = require('gulp-postcss')
 var syntaxSCSS = require('postcss-scss')
 var svgSprite = require('gulp-svg-sprite')
 var reporter = require('postcss-reporter')
+var sourcemaps = require('gulp-sourcemaps')
 var autoprefixer = require('autoprefixer')
 
 var onError = function (err) {
@@ -54,9 +55,11 @@ gulp.task('scss-lint', ['copy-files'], function () {
 
 gulp.task('css', ['copy-files'], function () {
 	return gulp.src(basePath + 'css/' + p.name + '.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(concat(p.name + '.min.css'))
 		.pipe(postcss(cssProcessors))
+		.pipe(concat(p.name + '.min.css'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(basePath + 'css'))
 })
 
@@ -75,8 +78,10 @@ gulp.task('js', function () {
 		.pipe(plumber({
 			errorHandler: onError
 		}))
+		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(concat(p.name + '.min.js'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(basePath + 'js'))
 })
 
