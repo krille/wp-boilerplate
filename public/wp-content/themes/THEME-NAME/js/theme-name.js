@@ -94,7 +94,7 @@ var MTIProjectId='9f0aca85-af7d-4fd4-8698-a84bdb7c8033';
 		var mtiTracking = document.createElement('script');
 		mtiTracking.type='text/javascript';
 		mtiTracking.async='true';
-		mtiTracking.src='/wp-content/themes/pellehalling/js/libs/mtiFontTrackingCode.js';
+		mtiTracking.src='/wp-content/themes/THEME-NAME/js/libs/mtiFontTrackingCode.js';
 		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
 })();
 /* eslint-enable */
