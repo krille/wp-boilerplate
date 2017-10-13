@@ -1,0 +1,14 @@
+/// <reference path="../pellehalling.scss" />
+
+.has-fixed-head {
+	padding-top: ($spacer * 2) + ($header-logo-height / $font-size-base);
+}
+
+
+
+@include media-breakpoint-up(md) {
+
+	.has-fixed-head {
+		padding-top: ($spacer * 2) + ($header-logo-height-md / $font-size-base);
+	}
+}

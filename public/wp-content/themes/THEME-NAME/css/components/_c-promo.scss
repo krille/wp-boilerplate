@@ -1,0 +1,30 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-promo {
+	font-size: $h5-font-size;
+	font-weight: $font-weight-bold;
+	background-color: $blue;
+
+	&:nth-child(odd) {
+		background-color: $gray-800;
+		color: #fff;
+	}
+}
+
+.c-promo-item {
+
+	margin-top: $spacer;
+
+	> p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+@include media-breakpoint-up(md) {
+
+	.c-promo-item {
+		margin-top: $spacer * 2;
+	}
+}

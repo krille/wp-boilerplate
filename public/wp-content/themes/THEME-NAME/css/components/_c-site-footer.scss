@@ -1,0 +1,13 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-site-footer {
+	background-color: $gray-800;
+	color: #fff;
+}
+
+.c-site-footer__heading {
+	color: $blue;
+	font-weight: 400;
+	font-size: $h2-font-size;
+	margin-bottom: $spacer * 2;
+}

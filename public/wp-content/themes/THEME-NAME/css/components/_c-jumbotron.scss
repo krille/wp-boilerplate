@@ -1,0 +1,34 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-jumbotron {
+	background-color: $gray-200;
+}
+
+.c-jumbotron__text {
+	background-color: $blue;
+}
+
+.c-jumbotron__image {
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 300px;
+}
+
+
+
+@include media-breakpoint-up(sm) {
+
+	.c-jumbotron__text h1 {
+		font-size: $display3-size;
+	}
+}
+
+
+
+@include media-breakpoint-up(md) {
+
+	.c-jumbotron__image {
+		min-height: 600px;
+	}
+}

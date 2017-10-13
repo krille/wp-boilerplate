@@ -1,0 +1,118 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Todo: Update logo height here if it changes
+$header-logo-height: 3rem !default;
+$header-logo-height-md: 4rem !default;
+
+
+
+//
+// Color system
+//
+
+$white: 	 #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: 	 #000 !default;
+
+$blue:		 #a8d7e3 !default;
+$cyan:     #5bb4ca !default;
+
+$body-color: $gray-800 !default;
+$link-hover-color: $cyan !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 20px !default;
+
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+@font-face {
+	font-family: "Futura PT Multilingual W01";
+	src: url("../fonts/17abcb18-cb81-4d9c-b55c-5ded2109e506.eot?#iefix");
+	src: url("../fonts/17abcb18-cb81-4d9c-b55c-5ded2109e506.eot?#iefix") format("eot"), url("../fonts/aafdd021-88d4-41d8-8e15-fe91f83e4b17.woff2") format("woff2"), url("../fonts/81d44d4b-ac07-4ad4-8cdd-4df771a3c1c3.woff") format("woff"), url("../fonts/f47c9a36-7884-483a-80d7-57f9ee691407.ttf") format("truetype"), url("../fonts/b6a5374f-5656-4627-b423-1ba121767464.svg#b6a5374f-5656-4627-b423-1ba121767464") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Futura PT Multilingual W01";
+	src: url("../fonts/fa09a53f-1925-44fc-a00b-a133fa6e7e23.eot?#iefix");
+	src: url("../fonts/fa09a53f-1925-44fc-a00b-a133fa6e7e23.eot?#iefix") format("eot"), url("../fonts/848602e3-bda3-4b1c-976b-fe26eecfab31.woff2") format("woff2"), url("../fonts/e4eacf8d-aba1-40d4-9597-1198e91dcf00.woff") format("woff"), url("../fonts/0274b668-7ceb-4cae-96cf-eeeec93f3254.ttf") format("truetype"), url("../fonts/d6f7bb1f-4174-4eb7-b0eb-6eec4e96b2af.svg#d6f7bb1f-4174-4eb7-b0eb-6eec4e96b2af") format("svg");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Futura PT Multilingual W01";
+	src: url("../fonts/3c9d0225-c04a-42cc-8668-dbb331ff7639.eot?#iefix");
+	src: url("../fonts/3c9d0225-c04a-42cc-8668-dbb331ff7639.eot?#iefix") format("eot"), url("../fonts/62ef0139-153b-4dc3-a832-323fc185b537.woff2") format("woff2"), url("../fonts/0ae2b3c3-6d75-4392-b0f4-e8a5fead8b5d.woff") format("woff"), url("../fonts/198280fd-7f13-4376-a784-570780356b98.ttf") format("truetype"), url("../fonts/d84bef38-ca6f-484a-aec7-cacc5da93921.svg#d84bef38-ca6f-484a-aec7-cacc5da93921") format("svg");
+	font-weight: 800;
+	font-style: normal;
+}
+
+$font-family-sans-serif: "Futura PT Multilingual W01", "Helvetica", "Roboto", "Arial", sans-serif !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   0.875rem !default;
+
+$font-weight-light: 400 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$h1-font-size: 2.5rem !default;
+$h2-font-size: 2rem !default;
+$h3-font-size: 1.75rem !default;
+$h4-font-size: 1.5rem !default;
+$h5-font-size: 1.2rem !default;
+$h6-font-size: 1rem !default;
+
+$headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family:   inherit !default;
+$headings-font-weight:   800 !default;
+$headings-line-height:   1.1 !default;
+$headings-color:         inherit !default;
+
+$display1-size: 6rem !default;
+$display2-size: 5.5rem !default;
+$display3-size: 3.75rem !default;
+$display4-size: 3.5rem !default;
+
+$display1-weight:     400 !default;
+$display2-weight:     400 !default;
+$display3-weight:     800 !default;
+$display4-weight:     400 !default;
+$display-line-height: $headings-line-height !default;
+
+$lead-font-size:   1.94rem !default;
+$lead-font-weight: 400 !default;

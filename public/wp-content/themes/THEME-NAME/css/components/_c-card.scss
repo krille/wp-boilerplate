@@ -1,0 +1,17 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-card {
+	margin: 0 auto;
+	padding: $spacer;
+	max-width: 400px;
+
+	background-color: #fff;
+	color: $gray-800;
+	text-align: left;
+
+	box-shadow: 0.5rem 0.5rem 0 0 #000;
+}
+
+.c-card__logo {
+	max-width: 125px;
+}

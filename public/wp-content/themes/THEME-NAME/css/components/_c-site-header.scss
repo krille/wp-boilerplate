@@ -1,0 +1,48 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-site-header {
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: $zindex-fixed;
+	transition: transform 0.2s ease-in-out;
+	transform: translate3d(0, 0, 0);
+
+	.is-scrolling-down & {
+		transform: translate3d(0, -(($spacer * 2) + ($header-logo-height / $font-size-base)), 0);
+	}
+}
+
+.c-site-header__logo {
+	height: $header-logo-height;
+}
+
+.c-site-header__menu {
+	width: 3rem;
+	height: 3rem;
+	color: $gray-800;
+}
+
+.c-site-header__twitter {
+	position: absolute;
+	top: $spacer;
+	right: $spacer;
+}
+
+
+
+@include media-breakpoint-up(md) {
+
+	.c-site-header {
+
+		.is-scrolling-down & {
+			transform: translate3d(0, -(($spacer * 2) + ($header-logo-height-md / $font-size-base)), 0);
+		}
+	}
+
+	.c-site-header__logo {
+		height: $header-logo-height-md;
+	}
+}

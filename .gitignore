@@ -1,0 +1,45 @@
+# Misc files
+.DS_Store
+._.DS_Store
+sql/*
+
+# Build files
+node_modules
+bower_components
+
+# Include theme
+public/*
+!public/wp-content/
+public/wp-content/*
+!public/wp-content/themes/
+public/wp-content/themes/*
+!public/wp-content/themes/THEME-NAME/
+
+# Include MU-Plugins
+!public/wp-content/mu-plugins/
+
+# Ignore local by flywheel specific files
+local-by-flywheel-demo-urls.php
+
+# Bootstrap
+/public/wp-content/themes/THEME-NAME/css/bootstrap/
+
+# Minified css files
+/public/wp-content/themes/THEME-NAME/css/**/*.min.css
+/public/wp-content/themes/THEME-NAME/css/**/*.css.map
+/public/wp-content/themes/THEME-NAME/css/**/*-penthouse.css
+/public/wp-content/themes/THEME-NAME/css/critical/
+
+# JS Libs
+/public/wp-content/themes/THEME-NAME/js/libs/
+!/public/wp-content/themes/THEME-NAME/js/libs/mtiFontTrackingCode.js
+
+# Minified js files
+/public/wp-content/themes/THEME-NAME/js/**/*.min.js
+/public/wp-content/themes/THEME-NAME/js/**/*.js.map
+
+# SVG demo
+/public/wp-content/themes/THEME-NAME/img/sprites/sprite.symbol.html
+
+# yarn
+yarn.error

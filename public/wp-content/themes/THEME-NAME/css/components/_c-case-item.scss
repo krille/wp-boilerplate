@@ -1,0 +1,51 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-case-item {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	min-height: 250px;
+	background-color: $gray-900;
+	color: #fff;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		text-decoration: none;
+
+		.c-case-item__img {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.c-case-item__img {
+	opacity: 0.5;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.4s ease-in-out;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.c-case-item__title {
+	position: relative;
+	z-index: 2;
+}
+
+.c-case-item__excerpt {
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	font-weight: $font-weight-bold;
+}

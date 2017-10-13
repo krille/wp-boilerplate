@@ -1,0 +1,25 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-article__img {
+	margin-bottom: $spacer;
+}
+
+.c-article__heading {
+	color: $blue;
+	margin-bottom: $spacer;
+}
+
+.c-article__content {
+	font-size: $h5-font-size;
+
+	h2,
+	h3,
+	h4 {
+		margin-top: $spacer * 2;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

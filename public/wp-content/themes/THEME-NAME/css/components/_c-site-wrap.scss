@@ -1,0 +1,21 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-site-wrap {
+	margin: 0 auto;
+	max-width: 1600px;
+}
+
+.c-site-wrap-small {
+	margin: 0 auto;
+	max-width: 900px;
+}
+
+.c-site-wrap-medium {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.c-site-wrap__section {
+	padding: $spacer;
+	overflow: hidden;
+}

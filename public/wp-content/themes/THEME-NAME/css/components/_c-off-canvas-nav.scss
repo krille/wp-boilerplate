@@ -1,0 +1,64 @@
+/// <reference path="../pellehalling.scss" />
+
+.c-off-canvas-nav {
+	position: fixed;
+	width: 310px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: $zindex-modal;
+	background: #fff;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+	transform: translate3d(310px, 0, 0);
+
+	.has-menu & {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.c-off-canvas-nav__menu {
+	font-size: $lead-font-size;
+	font-weight: $font-weight-bold;
+
+	.menu-item {
+		margin-left: 0;
+	}
+}
+
+.c-off-canvas-nav-overlay {
+	display: none;
+
+	.has-menu & {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: $zindex-modal-backdrop;
+		background-color: rgba(0, 0, 0, 0.8);
+		animation: fade 500ms;
+	}
+}
+
+@include media-breakpoint-up(md) {
+
+	.c-off-canvas-nav {
+		width: 400px;
+		transform: translate3d(400px, 0, 0);
+	}
+}
+
+
+@keyframes fade {
+
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
