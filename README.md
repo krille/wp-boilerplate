@@ -1,24 +1,19 @@
-#TR Wordpress Theme
+# TR Wordpress Theme
 
-##Prerequisites
+## Prerequisites
 
-###Node
-Install from https://nodejs.org/
++ Node: https://nodejs.org/
++ Yarn: https://yarnpkg.com/
++ Gulp: https://gulpjs.com/
 
-###Yarn
-Install from https://yarnpkg.com/
-
-###Gulp
-Install from https://gulpjs.com/
-
-##VS Code plugin recommendations
+## VS Code plugins
 + EditorConfig for VS Code
 + ESLint
 + Stylelint
 
-##First run
+## First run
 1. `yarn install` - installs required node modules
 2. `gulp` - run tasks defined in gulpfile.js
 
-##Development
+## Development
 `gulp watch` - watches files specified in gulpfile.js for changes and runs the specified tasks on change.
