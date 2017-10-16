@@ -7,6 +7,7 @@
  *
  */
 
+
 /**
  * For developers: WordPress debugging mode.
  *

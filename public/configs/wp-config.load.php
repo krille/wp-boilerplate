@@ -2,10 +2,8 @@
 /**
  * WordPress Multi-Environment Config - Load config settings
  *
- * @package    Studio 24 WordPress Multi-Environment Config
- * @version    2.0.0
- * @author     Studio 24 <hello@studio24.net>
  */
+
 
 function s24_load_environment_config() {
 
