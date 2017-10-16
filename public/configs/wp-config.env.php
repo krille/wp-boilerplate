@@ -33,6 +33,6 @@ $env = [
     'development' => [
         'domain' => 'wp-boilerplate.dev',
         'path'   => '',
-        'ssl'    => true,
-    ],
+        'ssl'    => false,
+    ]
 ];
