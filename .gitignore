@@ -21,6 +21,11 @@ public/wp-content/themes/*
 # Ignore local by flywheel specific files
 local-by-flywheel-demo-urls.php
 
+# Ignore sensitive wp-config information
+!public/wp-config.php
+!public/configs/
+public/configs/wp-config.local.php
+
 # Bootstrap
 /public/wp-content/themes/THEME-NAME/css/bootstrap/
 
