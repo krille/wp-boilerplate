@@ -31,7 +31,7 @@ $env = [
         'ssl'    => false,
     ],
     'development' => [
-        'domain' => 'wp-boilerplate.dev',
+        'domain' => 'wp-boilerplate.local',
         'path'   => '',
         'ssl'    => false,
     ]

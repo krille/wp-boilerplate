@@ -2,15 +2,17 @@
 // Custom Variables
 //
 
-@import "custom";
 @import "bootstrap/functions";
-@import "bootstrap/variables";
+@import "custom";
+
+
 
 //
 // Bootstrap framework
 //
 
 @import "bootstrap/bootstrap";
+
 
 
 //
@@ -36,6 +38,7 @@
 @import "components/c-promo";
 @import "components/c-card";
 @import "components/c-article";
+
 
 
 //
