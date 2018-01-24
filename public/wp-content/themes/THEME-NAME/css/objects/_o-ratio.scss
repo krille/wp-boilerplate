@@ -1,3 +1,33 @@
+// See lib/lazysizes.php
+
+.o-ratio {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.o-ratio__helper {
+	display: block;
+	height: 0;
+	width: 100%;
+	padding-bottom: 56.25%;
+}
+
+.o-ratio img,
+.o-ratio iframe,
+.o-ratio video,
+.o-ratio object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+// Legacy ratio code
+/*
 .o-ratio {
 	position: relative;
 	display: block;
@@ -6,8 +36,6 @@
 	height: 0;
 }
 
-/* stylelint-disable */
-/* Decendant selectors needed */
 .o-ratio__content,
 .o-ratio > embed,
 .o-ratio > iframe,
@@ -19,4 +47,4 @@
 	width: 100%;
 	height: 100%;
 }
-/* stylelint-enable */
+*/

@@ -1,5 +1,7 @@
 <?php
 
+// https://github.com/aFarkas/wp-lazysizes/blob/master/wp-lazysizes.php
+
 if ( ! class_exists( 'LazySizes' ) ) :
 
 class LazySizes {
@@ -13,8 +15,8 @@ class LazySizes {
         if ( !is_admin() ) {
             add_filter( 'the_content', array( $this, 'filter_images'), 200 );
             //add_filter( 'post_thumbnail_html', array( $this, 'filter_images'), 200 );
-			add_filter( 'widget_text', array( $this, 'filter_images'), 200 );
-			add_filter( 'wp_get_attachment_image_attributes', array( $this, 'filter_image_attributes'), 200 );
+            add_filter( 'widget_text', array( $this, 'filter_images'), 200 );
+            add_filter( 'wp_get_attachment_image_attributes', array( $this, 'filter_image_attributes'), 200 );
         }
     }
 
@@ -24,37 +26,37 @@ class LazySizes {
             self::$instance = new self;
         }
         return self::$instance;
-	}
+    }
 
 
     function filter_image_attributes( $attr ) {
 
-		if ( is_feed()
-			|| intval( get_query_var( 'print' ) ) == 1
-			|| intval( get_query_var( 'printpage' ) ) == 1
-			|| strpos( $_SERVER['HTTP_USER_AGENT'], 'Opera Mini' ) !== false
-		) {
-			return $attr;
-		}
+        if ( is_feed()
+            || intval( get_query_var( 'print' ) ) == 1
+            || intval( get_query_var( 'printpage' ) ) == 1
+            || strpos( $_SERVER['HTTP_USER_AGENT'], 'Opera Mini' ) !== false
+        ) {
+            return $attr;
+        }
 
-		$attr['data-src'] = $attr['src'];
-		$attr['src'] = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+        $attr['data-src'] = $attr['src'];
+        $attr['src'] = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 
 
-		if ( !empty($attr['sizes'])) {
-			$attr['data-sizes'] = 'auto';
-			unset($attr['sizes']);
-		}
+        if ( !empty($attr['sizes'])) {
+            $attr['data-sizes'] = 'auto';
+            unset($attr['sizes']);
+        }
 
-		if ( !empty($attr['srcset'])) {
-			$attr['data-srcset'] = $attr['srcset'];
-			unset($attr['srcset']);
-		}
+        if ( !empty($attr['srcset'])) {
+            $attr['data-srcset'] = $attr['srcset'];
+            unset($attr['srcset']);
+        }
 
-		$attr['class'] = $attr['class'] .= ' lazyload';
+        $attr['class'] = $attr['class'] .= ' lazyload';
 
-		return $attr;
-	}
+        return $attr;
+    }
 
 
     function filter_images( $content ) {
@@ -67,7 +69,7 @@ class LazySizes {
             return $content;
         }
 
-		$respReplace = 'data-sizes="auto" data-srcset=';
+        $respReplace = 'data-sizes="auto" data-srcset=';
 
 
         $matches = array();
@@ -91,6 +93,19 @@ class LazySizes {
 
                 $replaceHTML = $this->_add_class( $replaceHTML, 'lazyload' );
 
+                if ( preg_match( '/width=["|\']*(\d+)["|\']*/', $imgHTML, $width ) == 1
+                    && preg_match( '/height=["|\']*(\d+)["|\']*/', $imgHTML, $height ) == 1 ) {
+                    $ratioBox = '<span class="o-ratio';
+                    if ( preg_match( '/(align(none|left|right|center))/', $imgHTML, $align_class ) == 1 ) {
+                        $ratioBox .= ' ' . $align_class[0];
+                        $replaceHTML = str_replace( $align_class[0], '', $replaceHTML );
+                    }
+
+                    $ratioBox .= '" style="max-width: ' . $width[1] . 'px; max-height: ' . $height[1] . 'px;';
+                    $ratioBox .= '"><span class="o-ratio__helper" style="padding-bottom: ';
+                    $replaceHTML = $ratioBox . (($height[1] / $width[1]) * 100) . '%;"></span>'. $replaceHTML . '</span>';
+                }
+
                 array_push( $search, $imgHTML );
                 array_push( $replace, $replaceHTML );
             }
@@ -99,7 +114,7 @@ class LazySizes {
         $content = str_replace( $search, $replace, $content );
 
         return $content;
-	}
+    }
 
 
     private function _add_class( $htmlString = '', $newClass ) {
