@@ -41,6 +41,12 @@
 	}
 }
 
+// Prevent scroll on body when off-canvas-nav is open
+
+.has-menu {
+	overflow: hidden;
+}
+
 @include media-breakpoint-up(md) {
 
 	.c-off-canvas-nav {
